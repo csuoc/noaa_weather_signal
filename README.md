@@ -152,7 +152,7 @@ The video below show an actual reception of **NOAA 18** using SDR# and a simple 
 
 As the satellite rises above the horizon, its signal appears in the waterfall display. The APT ticking is immediately visible as a rhythmic pattern in the spectrum.
 
-<p align="center"><video src="media/noaa_signal.mp4" alt="Signal transmitted by NOAA" width="40%"/></video></p>
+<p align="center"><video src="media/noaa_signal_compressed.mp4" alt=["Signal transmitted by NOAA"] width="40%"/></video></p>
 
 > The Doppler shift is noticeable: the signal appears slightly above the nominal frequency when the satellite is approaching, then drifts below it as it recedes. SDR# does not correct for this automatically — some operators tune manually during the pass.
 
