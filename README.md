@@ -1,21 +1,6 @@
-# Space Sends You Selfies… and You Can Download Them!
+# Downloading Weather Images from NOAA satellites
 
 <p align="center"><img src="media/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
-
-## Table of Contents
-
-1. [Listening to the Universe](#1-listening-to-the-universe)
-2. [The RTL-SDR Receiver](#2-the-rtl-sdr-receiver)
-3. [Watch Out for Counterfeits](#3-watch-out-for-counterfeits)
-4. [What Can You Receive?](#4-what-can-you-receive)
-5. [Software: SDR# + MMSSTV + WXTOIMG](#5-software-sdr--mmsstv--wxtoimg)
-6. [ISS – SSTV (Slow-Scan Television)](#6-iss--sstv-slow-scan-television)
-7. [Weather Satellites: NOAA & METEOR](#7-weather-satellites-noaa--meteor)
-8. [APT – Automatic Picture Transmission](#8-apt--automatic-picture-transmission)
-9. [Receiving NOAA 18 in Action](#9-receiving-noaa-18-in-action)
-10. [Decoding with WXTOIMG](#10-decoding-with-wxtoimg)
-11. [⚠️ 2025 Update: NOAA Decommissioning](#11-️-2025-update-noaa-decommissioning)
-12. [Bonus: Radio Astronomy](#12-bonus-radio-astronomy)
 
 ## 1. Listening to the Universe
 
@@ -30,7 +15,7 @@ The **RTL-SDR** is an inexpensive Software Defined Radio (SDR) dongle that was o
 ### Key specs
 
 | Feature | Details |
-|||
+|---|---|
 | Frequency range | 500 kHz – 1.75 GHz |
 | Original purpose | DVB-T TV tuner |
 | Software needed | SDR# (SDRSharp) or similar |
@@ -63,7 +48,7 @@ Always buy from the official store at [rtl-sdr.com/genuine](https://www.rtl-sdr.
 With the RTL-SDR and a dipole antenna you can pick up a surprisingly wide range of signals:
 
 | Category | Examples |
-|||
+|---|---|
 | 🛰️ ISS | SSTV image events at 145.800 MHz |
 | 🌤️ Weather satellites | NOAA APT media ~137.6 MHz, Meteor-M LRPT |
 | 🔭 Radio astronomy | Galactic plane at 1420.4 MHz (hydrogen line) |
@@ -76,7 +61,7 @@ Two families of low Earth orbit (LEO) weather satellites broadcast imagery conti
 ### NOAA (USA) — APT
 
 | Parameter | Value |
-|||
+|---|---|
 | Active satellites | NOAA-15, NOAA-18, NOAA-19 |
 | Frequency | ~137.5–137.9 MHz (varies per satellite) |
 | Mode | APT (Automatic Picture Transmission) |
@@ -91,7 +76,7 @@ Common frequencies:
 ### METEOR-M (Russia) — LRPT
 
 | Parameter | Value |
-|||
+|---|---|
 | Active satellite | Meteor M2-3 |
 | Frequency | 137.100 MHz |
 | Mode | LRPT (digital, higher resolution than APT) |
@@ -99,7 +84,7 @@ Common frequencies:
 
 > ⚠️ **Note:** Meteor LRPT requires more complex decoding software and careful timing. It is not covered in detail here — NOAA APT is the recommended starting point.
 
-## 6. APT – Automatic Picture Transmission
+### 5.1 Understanding NOAA signals - Automatic Picture Transmission
 
 APT is the analogue image transmission standard used by NOAA satellites. It was designed specifically to broadcast meteorological imagery and has been in continuous use since the 1960s.
 
@@ -115,7 +100,7 @@ APT is the analogue image transmission standard used by NOAA satellites. It was 
 A single satellite pass (typically 8–12 minutes overhead) produces an image strip showing a swath of the Earth's surface roughly **2,700 km wide**. The infrared channel is available day and night, while the visible channel only works in daylight.
 
 
-## 7. Software: SDR# + WXTOIMG
+## 6. Software: SDR# + WXTOIMG
 
 Two programs cover the main use-cases described in this guide:
 
@@ -157,7 +142,7 @@ Setup steps:
 WXTOIMG can automatically apply false colour, add map overlays, calculate sea surface temperatures, and more.
 
 
-## 8. Receiving NOAA 18 in Action
+## 7. Receiving NOAA 18 in Action
 
 The video below show an actual reception of **NOAA 18** using SDR# and a simple RTL-SDR dipole antenna.
 
@@ -192,14 +177,14 @@ The result for a NOAA-18 pass on **09/03/2025**:
 
 You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. This image was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
 
-## 11. ⚠️ 2025 Update: NOAA Decommissioning
+## 8. ⚠️ 2025 Update: NOAA Decommissioning
 
 **As of August 2025, all three classic NOAA APT satellites (NOAA-15, 18, and 19) have been decommissioned and are no longer transmitting.**
 
 The satellites served for decades beyond their design lifetimes:
 
 | Satellite | Service period | Days in service |
-||||
+|---|---|---|
 | NOAA-15 | 05/1998 – 08/2025 | ~9,961 |
 | NOAA-18 | 05/2005 – 06/2025 | ~7,323 |
 | NOAA-19 | 02/2009 – 08/2025 | ~6,033 |
@@ -209,10 +194,10 @@ This guide is preserved for historical and educational purposes. The workflow de
 > 🔎 **Alternatives:** The Russian **Meteor-M2-3** satellite still transmits LRPT (digital) imagery on 137.100 MHz and can be decoded with **SatDump** — though with more complexity involved.
 
 
-## Resources & Links
+## 9. Resources & Links
 
 | Resource | URL |
-|||
+|---|---|
 | RTL-SDR Blog (hardware) | [rtl-sdr.com](https://www.rtl-sdr.com) |
 | Official Spain reseller | [astroradio.com](https://astroradio.com) |
 | Genuine RTL-SDR check | [rtl-sdr.com/genuine](https://www.rtl-sdr.com/genuine) |
