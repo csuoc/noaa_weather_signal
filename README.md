@@ -175,13 +175,16 @@ Once you have a raw image, WXTOIMG can:
 - Export to PNG, JPEG, or other formats
 
 
+## 9. Results
+
 The result for a NOAA-18 pass on **09/03/2025**:
 
+Visible:
 <p align="center"><img src="media/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
 
 You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. This image was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
 
-## 9. ⚠️ 2025 Update: NOAA Decommissioning
+## 10. ⚠️ 2025 Update: NOAA Decommissioning
 
 **As of August 2025, all three classic NOAA APT satellites (NOAA-15, 18, and 19) have been decommissioned and are no longer transmitting.**
 
@@ -198,7 +201,7 @@ This guide is preserved for historical and educational purposes. The workflow de
 > 🔎 **Alternatives:** The Russian **Meteor-M2-3** satellite still transmits LRPT (digital) imagery on 137.100 MHz and can be decoded with **SatDump** — though with more complexity involved.
 
 
-## 10. Resources & Links
+## 11. Resources & Links
 
 | Resource | URL |
 |---|---|
@@ -207,11 +210,7 @@ This guide is preserved for historical and educational purposes. The workflow de
 | Genuine RTL-SDR check | [rtl-sdr.com/genuine](https://www.rtl-sdr.com/genuine) |
 | SDR# download | [airspy.com/download](https://airspy.com/download/) |
 | WXTOIMG (archived) | [wxtoimgrestored.xyz](https://wxtoimgrestored.xyz/) |
-| MMSSTV | [mmhamsoft.amateur-radio.ca](http://www.mmhamsoft.amateur-radio.ca/) |
-| ARISS (ISS SSTV events) | [ariss.org](https://www.ariss.org/) |
+| GPredict | [github.com/csete/gpredict](https://github.com/csete/gpredict) |
 | Satellite tracking | [heavens-above.com](https://www.heavens-above.com/) |
-| SatDump (Meteor/modern sats) | [github.com/SatDump/SatDump](https://github.com/SatDump/SatDump) |
 
-
-
-*Presentation originally delivered in Catalan at the XX Jornada Astronòmica, 18 October 2025.*
+*This guide is a summary of the original presentation "L'espai t'envia selfies... i tu els pots descarregar!" delivered in Catalan at the XX Jornada Astronòmica, 18 October 2025.*
