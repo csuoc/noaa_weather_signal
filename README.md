@@ -60,7 +60,7 @@ For this guide, we will focus on receiving data from **weather satellites**.
 
 Two families of low Earth orbit (LEO) weather satellites broadcast imagery continuously — no special permission needed to receive them.
 
-NOAA (USA) — APT
+### 5.1. NOAA (USA) — APT
 
 | Parameter | Value |
 |---|---|
@@ -75,7 +75,7 @@ Common frequencies:
 - NOAA-18: **137.9125 MHz**
 - NOAA-19: **137.100 MHz**
 
-METEOR-M (Russia) — LRPT
+### 5.2. METEOR-M (Russia) — LRPT
 
 | Parameter | Value |
 |---|---|
@@ -86,7 +86,7 @@ METEOR-M (Russia) — LRPT
 
 > ⚠️ **Note:** Meteor LRPT requires more complex decoding software and careful timing. It is not covered in detail here — NOAA APT is the recommended starting point.
 
-### 5.1 Understanding NOAA signals - Automatic Picture Transmission
+## 6. Understanding NOAA signals - Automatic Picture Transmission
 
 APT is the analogue image transmission standard used by NOAA satellites. It was designed specifically to broadcast meteorological imagery and has been in continuous use since the 1960s.
 
@@ -102,19 +102,19 @@ APT is the analogue image transmission standard used by NOAA satellites. It was 
 A single satellite pass (typically 8–12 minutes overhead) produces an image strip showing a swath of the Earth's surface roughly **2,700 km wide**. The infrared channel is available day and night, while the visible channel only works in daylight.
 
 
-## 6. Software: SDR# + WXTOIMG
+## 7. Signal Capture software: SDR# + WXTOIMG
 
-Two programs cover the main use-cases described in this guide:
+Two programs cover the main use-case described in this guide:
 
-**SDR# (SDRSharp)**
+### 7.1 SDR# (SDRSharp)
 
 <p align="center"><img src="media/sdr_logo.png" alt="SDR# logo" width="30%"/></p>
 
 The main receiver software. It connects to the RTL-SDR dongle, lets you tune to any frequency, adjusts filters and gain, and can record audio (baseband .wav files) for later decoding.
 
-**Download:** [airspy.com/download](https://airspy.com/download/)
+Download: [airspy.com/download](https://airspy.com/download/)
 
-**Basic SDR# setup for satellite reception:**
+Basic SDR# setup for satellite reception:
 
 1. Install the RTL-SDR drivers (use Zadig on Windows to install WinUSB).
 2. Open SDR#, set source to **RTL-SDR USB**.
@@ -126,7 +126,7 @@ The main receiver software. It connects to the RTL-SDR dongle, lets you tune to 
 8. Once the satellite pass begins, hit **Record** to save the audio.
 
 
-**WXTOIMG**
+### 7.2. WXTOIMG
 
 <p align="center"><img src="media/wxtoimg.png" alt="WXtoimg logo"/></p>
 
@@ -144,7 +144,7 @@ Setup steps:
 WXTOIMG can automatically apply false colour, add map overlays, calculate sea surface temperatures, and more.
 
 
-## 7. Receiving NOAA 18 in Action
+## 8. Receiving NOAA 18 in Action
 
 The video below show an actual reception of **NOAA 18** using SDR# and a simple RTL-SDR dipole antenna.
 
@@ -179,7 +179,7 @@ The result for a NOAA-18 pass on **09/03/2025**:
 
 You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. This image was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
 
-## 8. ⚠️ 2025 Update: NOAA Decommissioning
+## 9. ⚠️ 2025 Update: NOAA Decommissioning
 
 **As of August 2025, all three classic NOAA APT satellites (NOAA-15, 18, and 19) have been decommissioned and are no longer transmitting.**
 
@@ -196,7 +196,7 @@ This guide is preserved for historical and educational purposes. The workflow de
 > 🔎 **Alternatives:** The Russian **Meteor-M2-3** satellite still transmits LRPT (digital) imagery on 137.100 MHz and can be decoded with **SatDump** — though with more complexity involved.
 
 
-## 9. Resources & Links
+## 10. Resources & Links
 
 | Resource | URL |
 |---|---|
