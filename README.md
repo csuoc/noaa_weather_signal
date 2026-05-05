@@ -54,11 +54,13 @@ With the RTL-SDR and a dipole antenna you can pick up a surprisingly wide range 
 | 🔭 Radio astronomy | Galactic plane at 1420.4 MHz (hydrogen line) |
 | ✈️ Radar & ADS-B | Aircraft transponders at 1090 MHz |
 
+For this guide, we will focus on receiving data from **weather satellites**.
+
 ## 5. Weather Satellites: NOAA & METEOR
 
 Two families of low Earth orbit (LEO) weather satellites broadcast imagery continuously — no special permission needed to receive them.
 
-### NOAA (USA) — APT
+NOAA (USA) — APT
 
 | Parameter | Value |
 |---|---|
@@ -73,7 +75,7 @@ Common frequencies:
 - NOAA-18: **137.9125 MHz**
 - NOAA-19: **137.100 MHz**
 
-### METEOR-M (Russia) — LRPT
+METEOR-M (Russia) — LRPT
 
 | Parameter | Value |
 |---|---|
@@ -88,14 +90,14 @@ Common frequencies:
 
 APT is the analogue image transmission standard used by NOAA satellites. It was designed specifically to broadcast meteorological imagery and has been in continuous use since the 1960s.
 
-### How APT works
+**How APT works**
 
 - media are transmitted **continuously** (not in discrete bursts like SSTV)
 - Two image channels are sent simultaneously: **Channel A** (visible light) and **Channel B** (infrared / thermal)
 - The signal sweeps one pixel-line at a time from top to bottom — the longer the pass, the more of the Earth you capture
 - The characteristic "ticking" audio is the 2400 Hz sync carrier
 
-### What you get
+**What you get**
 
 A single satellite pass (typically 8–12 minutes overhead) produces an image strip showing a swath of the Earth's surface roughly **2,700 km wide**. The infrared channel is available day and night, while the visible channel only works in daylight.
 
@@ -104,7 +106,7 @@ A single satellite pass (typically 8–12 minutes overhead) produces an image st
 
 Two programs cover the main use-cases described in this guide:
 
-### SDR# (SDRSharp)
+**SDR# (SDRSharp)**
 
 <p align="center"><img src="media/sdr_logo.png" alt="SDR# logo" width="30%"/></p>
 
@@ -124,7 +126,7 @@ The main receiver software. It connects to the RTL-SDR dongle, lets you tune to 
 8. Once the satellite pass begins, hit **Record** to save the audio.
 
 
-### WXTOIMG
+**WXTOIMG**
 
 <p align="center"><img src="media/wxtoimg.png" alt="WXtoimg logo"/></p>
 
