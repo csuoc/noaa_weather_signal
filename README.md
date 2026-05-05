@@ -1,6 +1,6 @@
 # Downloading Weather Images from NOAA satellites
 
-<p align="center"><img src="media/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
+<p align="center"><img src="images/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
 
 ## 1. Listening to the Universe
 
@@ -10,7 +10,7 @@ Did you know that satellites orbiting Earth are constantly broadcasting signals 
 
 The **RTL-SDR** is an inexpensive Software Defined Radio (SDR) dongle that was originally designed as a USB DVB-T television tuner. Hackers discovered that its chip (the RTL2832U) could be repurposed as a wideband radio receiver, and the SDR community was born.
 
-<p align="center"><img src="media/rtl_sdr.png" alt="RTL-SDR V4 dongle" width="40%"/></p>
+<p align="center"><img src="images/rtl_sdr.png" alt="RTL-SDR V4 dongle" width="40%"/></p>
 
 ### Key specs
 
@@ -23,7 +23,7 @@ The **RTL-SDR** is an inexpensive Software Defined Radio (SDR) dongle that was o
 
 The starter kit includes the dongle itself plus a **dipole antenna** that can be adjusted and oriented for different frequency bands — perfect for the ~137 MHz range used by weather satellites.
 
-<p align="center"><img src="media/dongle_kit.png" alt="Dongle Kit" width="40%"/></p>
+<p align="center"><img src="images/dongle_kit.png" alt="Dongle Kit" width="40%"/></p>
 
 > **Tip:** For VHF satellite reception (~137 MHz), extend each dipole arm to approximately **53 cm** (quarter-wavelength). Orient the antenna horizontally and point it towards the sky for best results.
 
@@ -36,8 +36,8 @@ The RTL-SDR Blog brand (rtl-sdr.com) is widely cloned. Counterfeit units may loo
 - Cheaper PCBs without thermal pads
 - No TCXO (temperature-compensated oscillator), causing frequency drift
 
-<p align="center"><img src="media/fake_1.png" alt="How to spot a genuine RTL-SDR Blog V3" width="40%"/></p>
-<p align="center"><img src="media/fake_2.png" alt="Examples of fake RTL-SDR clones" width="40%"/></p>
+<p align="center"><img src="images/fake_1.png" alt="How to spot a genuine RTL-SDR Blog V3" width="40%"/></p>
+<p align="center"><img src="images/fake_2.png" alt="Examples of fake RTL-SDR clones" width="40%"/></p>
 
 **Official seller in Spain:** [astroradio.com](https://astroradio.com)
 
@@ -50,7 +50,7 @@ With the RTL-SDR and a dipole antenna you can pick up a surprisingly wide range 
 | Category | Examples |
 |---|---|
 | 🛰️ ISS | SSTV image events at 145.800 MHz |
-| 🌤️ Weather satellites | NOAA APT media ~137.6 MHz, Meteor-M LRPT |
+| 🌤️ Weather satellites | NOAA APT images ~137.6 MHz, Meteor-M LRPT |
 | 🔭 Radio astronomy | Galactic plane at 1420.4 MHz (hydrogen line) |
 | ✈️ Radar & ADS-B | Aircraft transponders at 1090 MHz |
 
@@ -92,7 +92,7 @@ APT is the analogue image transmission standard used by NOAA satellites. It was 
 
 **How APT works**
 
-- media are transmitted **continuously** (not in discrete bursts like SSTV)
+- images are transmitted **continuously** (not in discrete bursts like SSTV)
 - Two image channels are sent simultaneously: **Channel A** (visible light) and **Channel B** (infrared / thermal)
 - The signal sweeps one pixel-line at a time from top to bottom — the longer the pass, the more of the Earth you capture
 - The characteristic "ticking" audio is the 2400 Hz sync carrier
@@ -108,7 +108,7 @@ Two programs cover the main use-case described in this guide:
 
 ### 7.1 SDR# (SDRSharp)
 
-<p align="center"><img src="media/sdr_logo.png" alt="SDR# logo" width="30%"/></p>
+<p align="center"><img src="images/sdr_logo.png" alt="SDR# logo" width="30%"/></p>
 
 The main receiver software. It connects to the RTL-SDR dongle, lets you tune to any frequency, adjusts filters and gain, and can record audio (baseband .wav files) for later decoding.
 
@@ -128,7 +128,7 @@ Basic SDR# setup for satellite reception:
 
 ### 7.2. WXTOIMG
 
-<p align="center"><img src="media/wxtoimg.png" alt="WXtoimg logo"/></p>
+<p align="center"><img src="images/wxtoimg.png" alt="WXtoimg logo"/></p>
 
 Used to decode **APT (Automatic Picture Transmission)** from NOAA weather satellites. It can work with a live audio feed or a pre-recorded .wav file.
 
@@ -150,7 +150,7 @@ The video below show an actual reception of **NOAA 18** using SDR# and a simple 
 
 **Step 1 — Find the signal in SDR#**
 
-As the satellite rises above the horizon, its signal appears in the waterfall display. The APT ticking is immediately visible as a rhythmic pattern in the spectrum.
+As the satellite rises above the horizon, its signal appears in the waterfall display. The APT ticking is imimagestely visible as a rhythmic pattern in the spectrum.
 
 <p align="center">
   <video src="https://github.com/user-attachments/assets/55a419cd-10ed-475d-99b5-39190b00c170" title="Signal transmitted by NOAA" controls></video>
@@ -180,7 +180,7 @@ Once you have a raw image, WXTOIMG can:
 The result for a NOAA-18 pass on **09/03/2025**:
 
 Visible:
-<p align="center"><img src="media/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
+<p align="center"><img src="images/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
 
 You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. This image was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
 
