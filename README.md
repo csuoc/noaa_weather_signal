@@ -1,6 +1,6 @@
 # Downloading Weather Images from NOAA satellites
 
-<p align="center"><img src="images/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
+<p align="center"><img src="images/noaa_msa_multiespectral.jpeg"" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
 
 ## 1. Listening to the Universe
 
@@ -128,7 +128,7 @@ Basic SDR# setup for satellite reception:
 
 ### 7.2. WXTOIMG
 
-<p align="center"><img src="images/wxtoimg.png" alt="WXtoimg logo"/></p>
+<p align="center"><img src="images/wxtoimg_logo.png" alt="WXtoimg logo"/></p>
 
 Used to decode **APT (Automatic Picture Transmission)** from NOAA weather satellites. It can work with a live audio feed or a pre-recorded .wav file.
 
@@ -179,10 +179,39 @@ Once you have a raw image, WXTOIMG can:
 
 The result for a NOAA-18 pass on **09/03/2025**:
 
-Visible:
-<p align="center"><img src="images/result.jpeg" alt="Decoded NOAA-18 APT satellite image, 09/03/2025" width="600"/></p>
+Raw image:
 
-You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. This image was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
+<p align="center"><img src="images/noaa_raw.jpg" alt="Raw NOAA-18 image" width="50%"/></p>
+
+Channel A (visible), contrast image:
+
+<p align="center"><img src="images/noaa_ch_a_contrast.jpg" alt="Channel A of NOAA-18 image" width="50%"/></p>
+
+Channel B (IR), contrast image:
+
+<p align="center"><img src="images/noaa_ch_b_contrast.jpg" alt="Channel B of NOAA-18 image" width="50%"/></p>
+
+Multispectral image (false colour):
+
+<p align="center"><img src="images/noaa_msa_multiespectral.jpeg" alt="MSA of NOAA-18 APT satellite image, 09/03/2025" width="50%"/></p>
+
+Multispectral image with precipitation:
+
+<p align="center"><img src="images/noaa_msa_precipitation.jpg" alt="MSA with precipitation of NOAA-18 APT satellite image, 09/03/2025" width="50%"/></p>
+
+Map Colored Infrared (MCIR) image with precipitation:
+
+<p align="center"><img src="images/noaa_mcir_precipitation.jpg" alt="MCIR with precipitation of NOAA-18 APT satellite image, 09/03/2025" width="50%"/></p>
+
+Sea surface temporature:
+
+<p align="center"><img src="images/noaa_sea_surface_temp.jpg" alt="Sea surface temp of NOAA-18 APT satellite image, 09/03/2025" width="50%"/></p>
+
+Temperature:
+
+<p align="center"><img src="images/noaa_thermal.jpg" alt="Temperature of NOAA-18 APT satellite image, 09/03/2025" width="50%"/></p>
+
+You can clearly see cloud formations, coastlines, and the boundary between the Atlantic Ocean and the Iberian Peninsula. These images was received with nothing more than a €50 RTL-SDR kit and a simple dipole antenna.
 
 ## 10. ⚠️ 2025 Update: NOAA Decommissioning
 
